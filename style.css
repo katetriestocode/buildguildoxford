@@ -6,14 +6,17 @@
   font-family: wack;
   src: url(https://assets.hackclub.com/fonts/Wack_Club_Sans/Regular.woff);
 }
-
+@font-face {
+    font-family: phantomregular;
+    src: url(https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Regular.woff);
+}
 
 body {
     background-image: url("https://github.com/katetriestocode/buildguildoxford/blob/main/assets/background.png?raw=true");
     background-size: 500px;
     background-repeat: repeat;
     text-align: center;
-    font-family: phantombold;
+    font-family: phantomregular;
     color: white;
     position: relative; 
     min-height: 100vh;
@@ -23,6 +26,7 @@ body {
 h1 {
     font-size: 7vw;
     font-weight: bold;
+    font-family: phantombold;
 }
 h2 {
     font-size: 7vw;
@@ -121,15 +125,73 @@ h2 {
     filter: brightness(1.05);
 }
 
-@media (max-width: 600px) {
-    .external-card {
-        font-size: 8vw;
-        padding: 15px 30px;
-    }
-    .button-arrow {
-        width: 6vw; /* Makes arrows slightly larger on mobile to match the bigger text */
-    }
+
+h4 {
+    font-family: wack;
+    color: #ebb12a;
+    font-size: 2.5vw;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
+
+h5 {
+    font-family: wack;
+    color: #ebb12a;
+    font-size: 2vw;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+p {
+    font-family: phantomregular;
+    color: white;
+    font-size: 1.2vw;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.sponsors-section {
+    margin: 80px auto;
+    max-width: 1100px;
+    padding: 0 20px;
+}
+
+.sponsors-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.sponsor-card {
+    flex: 1; /* Makes all three cards equal width */
+    display: flex;
+    align-items: center; /* Vertically centers logo with text */
+    background: rgba(255, 255, 255, 0.05); 
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(235, 177, 42, 0.3); /* Faint gold border */
+}
+
+.sponsor-logo {
+    width: 60px; /* Adjust based on your logo shapes */
+    height: auto;
+    margin-right: 15px;
+}
+
+.sponsor-details {
+    text-align: left;
+    font-size: 0.9rem;
+
+}
+
+.sponsor-details strong {
+    display: block;
+    color: #ebb12a;
+    font-family: wack;
+}
+
+
+
 
 
 
@@ -154,9 +216,24 @@ h2 {
     flex: 1; /* Makes the text take up the remaining space */
 }
 
-.split-text h3 {
+.split-text h6 {
     font-family: wack;
     color: #ebb12a;
     font-size: 3vw;
     margin-top: 0;
+}
+
+
+
+@media (max-width: 600px) {
+    .external-card {
+        font-size: 8vw;
+        padding: 15px 30px;
+    }
+    .button-arrow {
+        width: 6vw; /* Makes arrows slightly larger on mobile to match the bigger text */
+    }
+    .sponsors-row {
+        flex-direction: column;
+    }
 }
