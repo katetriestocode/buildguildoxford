@@ -234,21 +234,6 @@ p {
     margin-top: 0;
 }
 
-
-
-@media (max-width: 600px) {
-    .external-card {
-        font-size: 8vw;
-        padding: 15px 30px;
-    }
-    .button-arrow {
-        width: 6vw; /* Makes arrows slightly larger on mobile to match the bigger text */
-    }
-    .sponsors-row {
-        flex-direction: column;
-    }
-}
-
 p2 {
     font-family: phantomregular;
     color: white;
@@ -303,3 +288,131 @@ h6 {
     filter: brightness(1.05);
 }
 
+
+.project-ticker {
+    width: 100%;
+    overflow: hidden; /* Hides the items outside the screen */
+    background: rgba(0, 0, 0, 0.2); /* Subtle background contrast */
+    padding: 20px 0;
+    margin: 40px 0;
+}
+
+.ticker-wrap {
+    display: flex;
+    width: 100%;
+}
+
+.ticker-move {
+    display: flex;
+    white-space: nowrap;
+    /* Adjust '30s' to change the speed */
+    animation: ticker-scroll 30s linear infinite;
+}
+
+
+.ticker-item {
+    font-family: wack;
+    font-size: 2.5vw;
+    color: #ebb12a;
+    background: rgba(235, 177, 42, 0.1);
+    border: 2px solid #ebb12a;
+    padding: 10px 30px;
+    margin: 0 15px;
+    border-radius: 10px; 
+    cursor: default;
+    transition: transform 0.2s ease;
+}
+
+.ticker-item:hover {
+    background: #ebb12a;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Pause animation on hover so people can read */
+.ticker-wrap:hover .ticker-move {
+    animation-play-state: paused;
+}
+
+/* The Magic Loop */
+@keyframes ticker-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* This moves exactly half the width of the double-set */
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+
+@media (max-width: 600px) {
+    .external-card {
+        font-size: 8vw;
+        padding: 15px 30px;
+    }
+    .button-arrow {
+        width: 6vw; /* Makes arrows slightly larger on mobile to match the bigger text */
+    }
+    .sponsors-row {
+        flex-direction: column;
+    }
+    .ticker-item {
+        font-size: 5vw;
+        padding: 8px 20px;
+    }
+    .schedule-grid {
+    grid-template-columns: 1fr;
+    row-gap: 5px;
+    }
+    .event {
+        margin-bottom: 15px;
+    }
+}
+
+.schedule-container {
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: left; 
+    padding: 0 20px;
+}
+
+.schedule-note {
+    font-family: phantomsemibold;
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 25px;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Two columns: Time (auto width) and Event (fills rest) */
+    column-gap: 30px; /* Space between the two columns */
+    row-gap: 15px;    /* Space between each row */
+    align-items: baseline;
+}
+
+.time {
+    font-family: phantomsemibold;
+    color: #ebb12a; 
+    font-size: 1.2rem;
+    white-space: nowrap; /* Prevents times from wrapping to a second line */
+}
+
+.event {
+    font-family: phantomregular;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.contacts {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Subtle background contrast */
+    padding: 20px 0;
+    margin: 40px 0;
+}
