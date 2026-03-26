@@ -1,10 +1,10 @@
 @font-face {
-  font-family: phantombold; /* set name */
-  src: url(https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Bold.woff); /* url of the font */
+  font-family: phantombold; 
+  src: url(https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Bold.woff); 
 }
 @font-face {
-  font-family: wack; /* set name */
-  src: url(https://assets.hackclub.com/fonts/Wack_Club_Sans/Regular.woff); /* url of the font */
+  font-family: wack;
+  src: url(https://assets.hackclub.com/fonts/Wack_Club_Sans/Regular.woff);
 }
 
 
@@ -15,7 +15,11 @@ body {
     text-align: center;
     font-family: phantombold;
     color: white;
+    position: relative; 
+    min-height: 100vh;
+    padding-top: 50px; 
 }
+
 h1 {
     font-size: 7vw;
     font-weight: bold;
@@ -27,11 +31,14 @@ h2 {
 }
 
 h1, h2 {
-    margin: 0; /* Removes all space around them */
+    margin: 0; 
 }
 
 h1 {
-    margin-bottom: 0.5vw; /* Adds just a tiny gap under the heading */
+    margin-bottom: 0.5vw; 
+}
+h2 {
+    margin-bottom: 3vw
 }
 
 .corner-left {
@@ -45,11 +52,95 @@ h1 {
     right: 2vw;        /* Distance from the right */
     position: absolute; /* Pins them to the page */
     top: 2vw;          /* Distance from the top */
-    width: 25vw;        
+    width: 22vw;        
 }
 
-body {
-    position: relative; 
-    min-height: 100vh;
-    padding-top: 50px; /* Gives your main content some breathing room from the top */
+
+.external-card-link {
+    text-decoration: none;
+    display: inline-flex;    /* Elements sit in a row */
+    align-items: center;     /* Centers arrows vertically with the box */
+    justify-content: center; 
+    gap: 20px;               /* Space between arrows and the box */
+    margin: 10px auto;
+}
+
+.external-card {
+    background-color: #ebb12a; /* Dark grey background */
+    padding: 10px 40px; /* More padding for a larger card */
+    border-radius: 4px; /* Slightly rounded corners */
+    text-align: center;
+    font-size: 3.5vw;
+    line-height: 1;
+    font-family: wack;
+    color: white;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;          /* This puts everything in a row */
+    align-items: center;    /* Vertically centers arrows and text */
+    justify-content: center; /* Horizontally centers the group */
+    gap: 15px;              /* Adds space between the arrows and the text */
+}
+
+.outer-arrow {
+    width: 4vw;              /* Adjust size as needed */
+    height: auto;
+    transition: transform 0.2s ease; /* For a hover effect later! */
+}
+
+.external-card h3 {
+    margin: 0;         /* Removes the default browser spacing */
+    font-size: inherit; /* Forces the text to be exactly 3.5vw (the parent size) */
+}
+
+.button-arrow {
+    width: 3vw;             /* Scales the arrow relative to the screen width */
+    height: auto;           /* Maintains aspect ratio */
+    min-width: 20px;        /* Prevents arrows from disappearing on tiny screens */
+}
+
+.external-card:hover {
+    transform: scale(1.03);
+    filter: brightness(1.05);
+}
+
+@media (max-width: 600px) {
+    .external-card {
+        font-size: 8vw;
+        padding: 15px 30px;
+    }
+    .button-arrow {
+        width: 6vw; /* Makes arrows slightly larger on mobile to match the bigger text */
+    }
+}
+
+
+
+.split-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* Space between image and text */
+    max-width: 800px; /* Keeps it from getting too wide on big screens */
+    margin: 60px auto; /* Centers the whole block and adds space above/below */
+    padding: 0 20px;
+    text-align: left; /* Overrides the body's center alignment for this section */
+}
+
+.split-image {
+    width: 300px;
+    border-radius: 12px;
+    border: 3px solid #ebb12a; /* Adds a cool border matching your h2 color */
+}
+
+.split-text {
+    flex: 1; /* Makes the text take up the remaining space */
+}
+
+.split-text h3 {
+    font-family: wack;
+    color: #ebb12a;
+    font-size: 3vw;
+    margin-top: 0;
 }
