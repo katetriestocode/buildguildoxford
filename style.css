@@ -63,6 +63,7 @@ h2 {
     justify-content: center; 
     gap: 20px;               /* Space between arrows and the box */
     margin: 10px auto;
+    position: relative; /* Needed for absolute positioning of arrows */
 }
 
 .external-card {
@@ -84,20 +85,29 @@ h2 {
 }
 
 .outer-arrow {
-    width: 4vw;              /* Adjust size as needed */
+    position: absolute;    /* Removes them from the document flow */
+    top: 50%;              /* Move to middle of the parent */
+    transform: translateY(-50%); /* Perfectly centers them vertically */
+    width: 4vw;
     height: auto;
-    transition: transform 0.2s ease; /* For a hover effect later! */
+    pointer-events: none;
+}
+
+/* Position the left arrow outside the left edge */
+.left-arrow {
+    right: 100%;           /* Starts at the left edge of the button */
+    margin-right: 15px;    /* Pushes it further away */
+}
+
+/* Position the right arrow outside the right edge */
+.right-arrow {
+    left: 100%;            /* Starts at the right edge of the button */
+    margin-left: 15px;     /* Pushes it further away */
 }
 
 .external-card h3 {
     margin: 0;         /* Removes the default browser spacing */
     font-size: inherit; /* Forces the text to be exactly 3.5vw (the parent size) */
-}
-
-.button-arrow {
-    width: 3vw;             /* Scales the arrow relative to the screen width */
-    height: auto;           /* Maintains aspect ratio */
-    min-width: 20px;        /* Prevents arrows from disappearing on tiny screens */
 }
 
 .external-card:hover {
