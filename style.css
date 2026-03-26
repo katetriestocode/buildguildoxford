@@ -9,7 +9,7 @@
 
 
 body {
-    background-image: url("https://github.com/katetriestocode/buildguildoxford/blob/main/JA%20Jayagiri%20Sans%20(2).png?raw=true");
+    background-image: url("https://github.com/katetriestocode/buildguildoxford/blob/main/assets/background.png?raw=true");
     background-size: 500px;
     background-repeat: repeat;
     text-align: center;
@@ -88,21 +88,27 @@ h2 {
     position: absolute;    /* Removes them from the document flow */
     top: 50%;              /* Move to middle of the parent */
     transform: translateY(-50%); /* Perfectly centers them vertically */
-    width: 4vw;
+    width: 8vw;
     height: auto;
     pointer-events: none;
+}
+
+.external-card-link:hover .outer-arrow {
+    transform: translateY(-60%) scale(1.2);
 }
 
 /* Position the left arrow outside the left edge */
 .left-arrow {
     right: 100%;           /* Starts at the left edge of the button */
-    margin-right: 15px;    /* Pushes it further away */
+    margin-right: 30px;    /* Pushes it further away */
+    rotate: 15deg;
 }
 
 /* Position the right arrow outside the right edge */
 .right-arrow {
     left: 100%;            /* Starts at the right edge of the button */
-    margin-left: 15px;     /* Pushes it further away */
+    margin-left: 30px;     /* Pushes it further away */
+    rotate: -15deg;
 }
 
 .external-card h3 {
