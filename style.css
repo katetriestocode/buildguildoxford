@@ -258,6 +258,7 @@ h6 {
     margin-bottom: 15px;
 }   
 
+
 .mapslink {
     text-decoration: none;
     justify-content: center; 
@@ -416,3 +417,12 @@ h6 {
     padding: 20px 0;
     margin: 40px 0;
 }
+
+h8 {
+    font-family: wack;
+    color: #ebb12a;
+    font-size: 3vw;
+    margin-top: 0;
+    margin-bottom: 0px;
+}   
+
