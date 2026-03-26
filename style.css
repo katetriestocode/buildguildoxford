@@ -10,6 +10,10 @@
     font-family: phantomregular;
     src: url(https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Regular.woff);
 }
+@font-face {
+    font-family: phantomsemibold;
+    src: url(https://assets.hackclub.com/fonts/Phantom_Sans_0.8/Semibold.woff);
+}
 
 body {
     background-image: url("https://github.com/katetriestocode/buildguildoxford/blob/main/assets/background.png?raw=true");
@@ -178,6 +182,18 @@ p {
     margin-right: 15px;
 }
 
+.sponsor-logo2 {
+    width: 50px; /* Adjust based on your logo shapes */
+    height: auto;
+    margin-right: 15px;
+}
+
+.sponsor-logo3 {
+    width: 60px; /* Adjust based on your logo shapes */
+    height: auto;
+    margin-right: 15px;
+}
+
 .sponsor-details {
     text-align: left;
     font-size: 0.9rem;
@@ -206,11 +222,6 @@ p {
     text-align: left; /* Overrides the body's center alignment for this section */
 }
 
-.split-image {
-    width: 300px;
-    border-radius: 12px;
-    border: 3px solid #ebb12a; /* Adds a cool border matching your h2 color */
-}
 
 .split-text {
     flex: 1; /* Makes the text take up the remaining space */
@@ -237,3 +248,58 @@ p {
         flex-direction: column;
     }
 }
+
+p2 {
+    font-family: phantomregular;
+    color: white;
+    font-size: 1.4vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+p3 {
+    font-family: phantomsemibold;
+    color: white;
+    font-size: 1.6vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h6 {
+    font-family: wack;
+    color: #ebb12a;
+    font-size: 3vw;
+    margin-top: 0;
+    margin-bottom: 15px;
+}   
+
+.mapslink {
+    text-decoration: none;
+    justify-content: center; 
+    margin: 1px auto;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.maps {
+    background-color: #ebb12a; /* Dark grey background */
+    padding: 10px 10px; /* More padding for a larger card */
+    border-radius: 4px; /* Slightly rounded corners */
+    text-align: center;
+    font-size: 2vw;
+    line-height: 1;
+    font-family: wack;
+    color: white;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;          /* This puts everything in a row */
+    align-items: center;    /* Vertically centers arrows and text */
+    justify-content: center; /* Horizontally centers the group */
+}
+
+.maps:hover {
+    transform: scale(1.03);
+    filter: brightness(1.05);
+}
+
