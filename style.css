@@ -17,14 +17,14 @@
 
 body {
     background-image: url("https://github.com/katetriestocode/buildguildoxford/blob/main/assets/background.png?raw=true");
-    background-size: 500px;
+    background-size: 40vw;
     background-repeat: repeat;
     text-align: center;
     font-family: phantomregular;
     color: white;
     position: relative; 
     min-height: 100vh;
-    padding-top: 50px; 
+    padding-top: 6vw; 
 }
 
 h1 {
@@ -32,6 +32,7 @@ h1 {
     font-weight: bold;
     font-family: phantombold;
 }
+
 h2 {
     font-size: 7vw;
     font-family: wack;
@@ -63,21 +64,20 @@ h2 {
     width: 22vw;        
 }
 
-
 .external-card-link {
     text-decoration: none;
     display: inline-flex;    /* Elements sit in a row */
     align-items: center;     /* Centers arrows vertically with the box */
     justify-content: center; 
-    gap: 20px;               /* Space between arrows and the box */
-    margin: 10px auto;
+    gap: 2.5vw;               /* Space between arrows and the box */
+    margin: 1vw auto;
     position: relative; /* Needed for absolute positioning of arrows */
 }
 
 .external-card {
     background-color: #ebb12a; /* Dark grey background */
-    padding: 10px 40px; /* More padding for a larger card */
-    border-radius: 4px; /* Slightly rounded corners */
+    padding: 1vw 2vw; /* More padding for a larger card */
+    border-radius: 0.4vw; /* Slightly rounded corners */
     text-align: center;
     font-size: 3.5vw;
     line-height: 1;
@@ -85,11 +85,11 @@ h2 {
     color: white;
     transition: transform 0.2s ease, background-color 0.2s ease;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.4vw 1.5vw rgba(0, 0, 0, 0.2);
     display: flex;          /* This puts everything in a row */
     align-items: center;    /* Vertically centers arrows and text */
     justify-content: center; /* Horizontally centers the group */
-    gap: 15px;              /* Adds space between the arrows and the text */
+    gap: 1.5vw;              /* Adds space between the arrows and the text */
 }
 
 .outer-arrow {
@@ -108,14 +108,14 @@ h2 {
 /* Position the left arrow outside the left edge */
 .left-arrow {
     right: 100%;           /* Starts at the left edge of the button */
-    margin-right: 30px;    /* Pushes it further away */
+    margin-right: 3vw;    /* Pushes it further away */
     rotate: 15deg;
 }
 
 /* Position the right arrow outside the right edge */
 .right-arrow {
     left: 100%;            /* Starts at the right edge of the button */
-    margin-left: 30px;     /* Pushes it further away */
+    margin-left: 3vw;     /* Pushes it further away */
     rotate: -15deg;
 }
 
@@ -134,36 +134,36 @@ h4 {
     font-family: wack;
     color: #ebb12a;
     font-size: 2.5vw;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin-top: 4vw;
+    margin-bottom: 2vw;
 }
 
 h5 {
     font-family: wack;
     color: #ebb12a;
     font-size: 2vw;
-    margin-top: 5px;
-    margin-bottom: 0px;
+    margin-top: 0.5vw;
+    margin-bottom: 0vw;
 }
 
 p {
     font-family: phantomregular;
     color: white;
     font-size: 1.2vw;
-    margin-top: 0px;
-    margin-bottom: 5px;
+    margin-top: 0;
+    margin-bottom: 0.5vw;
 }
 
 .sponsors-section {
-    margin: 80px auto;
-    max-width: 1100px;
-    padding: 0 20px;
+    margin: 8vw auto;
+    max-width: 110vw;
+    padding: 0 2vw;
 }
 
 .sponsors-row {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 2vw;
 }
 
 .sponsor-card {
@@ -171,27 +171,27 @@ p {
     display: flex;
     align-items: center; /* Vertically centers logo with text */
     background: rgba(255, 255, 255, 0.05); 
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid rgba(235, 177, 42, 0.3); /* Faint gold border */
+    padding: 1vw;
+    border-radius: 0.8vw;
+    border: 0.1vw solid rgba(235, 177, 42, 0.3); /* Faint gold border */
 }
 
 .sponsor-logo {
-    width: 60px; /* Adjust based on your logo shapes */
+    width: 5vw; /* Adjust based on your logo shapes */
     height: auto;
-    margin-right: 15px;
+    margin-right: 1.5vw;
 }
 
 .sponsor-logo2 {
-    width: 50px; /* Adjust based on your logo shapes */
+    width: 5vw; /* Adjust based on your logo shapes */
     height: auto;
-    margin-right: 15px;
+    margin-right: 1.5vw;
 }
 
 .sponsor-logo3 {
-    width: 60px; /* Adjust based on your logo shapes */
+    width: 5vw; /* Adjust based on your logo shapes */
     height: auto;
-    margin-right: 15px;
+    margin-right: 1.5vw;
 }
 
 .sponsor-details {
@@ -215,7 +215,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px; /* Space between image and text */
+    gap: 4vw; /* Space between image and text */
     max-width: 800px; /* Keeps it from getting too wide on big screens */
     margin: 60px auto; /* Centers the whole block and adds space above/below */
     padding: 0 20px;
@@ -238,16 +238,16 @@ p2 {
     font-family: phantomregular;
     color: white;
     font-size: 1.4vw;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
 }
 
 p3 {
     font-family: phantomsemibold;
     color: white;
     font-size: 1.6vw;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
 }
 
 h6 {
@@ -416,5 +416,5 @@ h9 {
     color: white;
     font-size: 2vw;
     margin-top: 5px;
-    margin-bottom: 0px;
+    margin-bottom: 0vw;
 }
